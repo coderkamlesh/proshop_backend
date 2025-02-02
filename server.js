@@ -15,7 +15,7 @@ const port = process.env.PORT || 3333;
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://coderkamlesh.site"],
     credentials: true,
   })
 );
