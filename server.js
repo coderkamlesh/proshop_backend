@@ -15,7 +15,11 @@ const port = process.env.PORT || 3333;
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://coderkamlesh.site"],
+    origin: [
+      "http://localhost:3000",
+      "https://coderkamlesh.site",
+      "https://proshop.coderkamlesh.site",
+    ],
     credentials: true,
   })
 );
@@ -28,7 +32,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.status(200).json({
+    status: "Success",
+    message: "Server Running",
+  });
 });
 
 app.use("/api/products", productRoutes);
