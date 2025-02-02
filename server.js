@@ -19,6 +19,7 @@ app.use(
       "http://localhost:3000",
       "https://coderkamlesh.site",
       "https://proshop.coderkamlesh.site",
+      "proshop-backend-xi.vercel.app"
     ],
     credentials: true,
   })
